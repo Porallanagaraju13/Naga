@@ -12,6 +12,9 @@ import { useState, useEffect } from "react";
 
 // ✅ GitHub Pages safe asset paths
 const profileImage =
+  `${import.meta.env.BASE_URL}lovable-uploads/8bb0b87d-da64-4f99-b5cd-78969e88ffca.png`;
+
+const profileImage =
   `${import.meta.env.BASE_URL}lovable-uploads/c15bea31-3118-4b90-88bd-8f37c5467029.png`;
 
 const backgroundImage =
