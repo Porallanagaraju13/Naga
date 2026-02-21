@@ -4,17 +4,15 @@ import {
   Linkedin,
   Mail,
   Download,
-  Code,
-  Brain,
   Sparkles,
-  Zap,
-  Cpu,
-  Database,
 } from "lucide-react";
 
 import ParticleBackground from "./ParticleBackground";
 import { useState, useEffect } from "react";
-import professionalBg from "@/assets/professional-tech-bg.jpg";
+
+// ✅ GitHub Pages safe asset paths
+const profileImage = `${import.meta.env.BASE_URL}lovable-uploads/8bb0b87d-da64-4f99-b5cd-78969e88ffca.png`;
+const backgroundImage = `${import.meta.env.BASE_URL}assets/professional-tech-bg.jpg`;
 
 const Hero = () => {
   const [typewriterText, setTypewriterText] = useState("");
@@ -38,7 +36,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      
+
       {/* Particle Background */}
       <ParticleBackground />
 
@@ -46,7 +44,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20"
         style={{
-          backgroundImage: `url(${professionalBg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -138,7 +136,7 @@ const Hero = () => {
             <div className="flex gap-5">
 
               <a
-                href="https://github.com/Porallanagaraju13"
+                href="https://github.com/porallanagaraju13"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -166,9 +164,8 @@ const Hero = () => {
 
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-xl">
 
-              {/* IMPORTANT FIX */}
               <img
-                src={`${import.meta.env.BASE_URL}lovable-uploads/8bb0b87d-da64-4f99-b5cd-78969e88ffca.png`}
+                src={profileImage}
                 alt="Nagaraju Poralla"
                 className="w-full h-full object-cover hover:scale-105 transition duration-500"
                 loading="lazy"
