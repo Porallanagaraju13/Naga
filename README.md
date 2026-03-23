@@ -1,117 +1,187 @@
-# Personal Portfolio
+# 🌐 Poralla Nagaraju — Personal Portfolio
 
-Modern, responsive developer portfolio built with Vite, React, TypeScript, Tailwind CSS, and shadcn/ui. It showcases sections like Hero, About, Stats, Experience, Projects, Certifications, and Contact, with dark mode, smooth UI components, basic routing, and a lightweight chatbot widget.
+> A modern, responsive developer portfolio showcasing my projects, skills, experience, and certifications — built with React, TypeScript, Vite, and Tailwind CSS.
 
-## 🚀 Tech Stack
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat&logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat&logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat&logo=tailwind-css)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Components-black?style=flat)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
-- React 18 + TypeScript
-- Vite 5 (SWC React plugin)
-- Tailwind CSS + tailwind-merge + tailwindcss-animate
-- shadcn/ui (Radix UI primitives)
-- React Router DOM
-- TanStack Query (React Query)
-- Recharts (charts)
-- Lucide Icons
+---
+
+## 🔗 Live Demo
+
+🚀 [View Portfolio Live](https://porallanagaraju13.github.io/Naga) *(update with your deployed URL)*
+
+---
+
+## 🧠 Overview
+
+This is my **personal developer portfolio** — a single-page application that presents who I am, what I've built, and how to reach me. It features smooth UI interactions, dark mode support, a built-in chatbot widget, and a fully responsive layout across all screen sizes.
+
+---
 
 ## ✨ Features
 
-- Responsive UI with Tailwind + shadcn/ui components
-- Dark mode support via `next-themes`
-- Client-side routing with `react-router-dom`
-- Toasts and notifications (`sonner`, shadcn Toaster)
-- Charts/Stats section powered by `recharts`
-- Organized, reusable UI components under `src/components/ui`
-- Chatbot component mounted app-wide
+- 🌙 Dark / Light mode toggle
+- 🤖 Built-in Chatbot widget (app-wide)
+- 📊 Stats section with animated charts (Recharts)
+- 🧭 Smooth client-side routing (React Router)
+- 📱 Fully responsive — mobile, tablet, desktop
+- 🎨 Clean UI with shadcn/ui + Radix UI primitives
+- 🔔 Toast notifications (Sonner)
+- ⚡ Lightning-fast dev experience with Vite + SWC
+- 🌟 Particle background animation
 
-## 📦 Project Structure
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|-----------|
+| Frontend Framework | React 18 + TypeScript |
+| Build Tool | Vite 5 (SWC plugin) |
+| Styling | Tailwind CSS, tailwind-merge, tailwindcss-animate |
+| UI Components | shadcn/ui (Radix UI primitives) |
+| Routing | React Router DOM |
+| Data Fetching | TanStack Query (React Query) |
+| Charts | Recharts |
+| Icons | Lucide React |
+| Theming | next-themes |
+| Notifications | Sonner, shadcn Toaster |
+
+---
+
+## 📂 Project Structure
 
 ```
-src/
-  assets/                     # static assets
-  components/
-    ui/                       # shadcn/ui primitives
-    About.tsx
-    Certifications.tsx
-    Chatbot.tsx
-    Contact.tsx
-    Experience.tsx
-    Footer.tsx
-    Hero.tsx
-    Navigation.tsx
-    ParticleBackground.tsx
-    Projects.tsx
-    Stats.tsx
-  contexts/
-    ThemeContext.tsx          # theme handling
-  hooks/
-    use-mobile.tsx
-    use-toast.ts
-  lib/
-    utils.ts
-  pages/
-    Index.tsx                 # homepage (sections)
-    NotFound.tsx
-  App.tsx                     # providers, router, chatbot
-  main.tsx                    # React root
+Naga/
+│
+├── public/                        # Static assets (resume, certificates, images)
+├── src/
+│   ├── assets/                    # Images and static files
+│   ├── components/
+│   │   ├── ui/                    # shadcn/ui primitives
+│   │   ├── About.tsx              # About Me section
+│   │   ├── Certifications.tsx     # Certifications section
+│   │   ├── Chatbot.tsx            # Global chatbot widget
+│   │   ├── Contact.tsx            # Contact section
+│   │   ├── Experience.tsx         # Work/internship experience
+│   │   ├── Footer.tsx             # Footer
+│   │   ├── Hero.tsx               # Hero/landing section
+│   │   ├── Navigation.tsx         # Navbar
+│   │   ├── ParticleBackground.tsx # Animated background
+│   │   ├── Projects.tsx           # Projects showcase
+│   │   └── Stats.tsx              # Skills & stats
+│   ├── contexts/
+│   │   └── ThemeContext.tsx        # Dark/light theme context
+│   ├── hooks/
+│   │   ├── use-mobile.tsx
+│   │   └── use-toast.ts
+│   ├── lib/
+│   │   └── utils.ts
+│   ├── pages/
+│   │   ├── Index.tsx              # Homepage (all sections)
+│   │   └── NotFound.tsx           # 404 page
+│   ├── App.tsx                    # Providers, router, chatbot
+│   └── main.tsx                   # React root entry
+│
+├── index.html
+├── vite.config.ts
+├── tailwind.config.ts
+├── tsconfig.json
+├── package.json
+└── README.md
 ```
 
-Public assets include resume/CV and certificates under `public/`.
+---
 
-## 🛠️ Setup & Development
+## ⚙️ Getting Started
 
-Prerequisites: Node.js 18+ and npm.
+### Prerequisites
+- Node.js 18+
+- npm or bun
 
-```sh
-git clone <YOUR_REPO_URL>
-cd <YOUR_PROJECT_DIRECTORY>
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Porallanagaraju13/Naga.git
+cd Naga
+```
+
+### 2. Install Dependencies
+```bash
 npm install
+# or
+bun install
+```
+
+### 3. Start the Dev Server
+```bash
 npm run dev
 ```
 
-The dev server runs (by default) on http://localhost:8080 as configured in `vite.config.ts`.
+The app runs at **http://localhost:8080** by default.
+
+---
 
 ## 📜 Available Scripts
 
-- `npm run dev` – start Vite dev server
-- `npm run build` – production build
-- `npm run build:dev` – development-mode build
-- `npm run preview` – preview the production build locally
-- `npm run lint` – run ESLint
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start Vite development server |
+| `npm run build` | Production build → `dist/` |
+| `npm run build:dev` | Development-mode build |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint |
 
-## 🔧 Configuration
-
-- `vite.config.ts` – alias `@` → `src`, dev server port 8080
-- `tailwind.config.ts` – Tailwind setup + typography
-- `eslint.config.js` – TypeScript/React rules
-- `tsconfig*.json` – TypeScript configuration
-
-## 🧩 Key Implementation Details
-
-- Providers: App wraps `TooltipProvider`, `Toaster`, `Sonner`, and `QueryClientProvider`.
-- Routing: `BrowserRouter` routes `/` to `pages/Index.tsx` and `*` to `NotFound`.
-- Sections: `Index.tsx` composes `Hero`, `About`, `Stats`, `Experience`, `Projects`, `Certifications`, `Contact`, and `Footer`.
-- UI: Components from `src/components/ui` are based on shadcn/ui and Radix.
-- Chatbot: `Chatbot` is rendered globally from `App.tsx`.
+---
 
 ## 🚢 Deployment
 
-Static hosting works great (Vite build outputs to `dist/`). You can deploy to Netlify, Vercel, GitHub Pages, Cloudflare Pages, or any static host.
+This is a static Vite app — deploy it anywhere:
 
-Build and preview locally:
+| Platform | Steps |
+|----------|-------|
+| **GitHub Pages** | Use the included `.github/workflows` CI/CD |
+| **Vercel** | Connect repo → auto-deploy on push |
+| **Netlify** | Drag & drop `dist/` or connect repo |
+| **Cloudflare Pages** | Connect repo → set build command `npm run build` |
 
-```sh
+```bash
+# Build for production
 npm run build
+
+# Preview before deploying
 npm run preview
 ```
 
-## 📁 Assets & Content
+---
 
-- `public/` contains static files (resume/CV, certificates, images, robots.txt). Files here are served at the site root.
+## 📄 Portfolio Sections
 
-## 🤝 Contributing
+| Section | Description |
+|---------|-------------|
+| 🦸 Hero | Name, title, tagline, and CTA buttons |
+| 👤 About | Background, education, and interests |
+| 📊 Stats | Skills, tools, and proficiency metrics |
+| 💼 Experience | Internships and work experience |
+| 🚀 Projects | Featured projects with links |
+| 🏅 Certifications | Courses and certification badges |
+| 📬 Contact | Contact form and social links |
 
-Issues and PRs are welcome for fixes, improvements, or new features.
+---
 
-## 📄 License
+## 👤 Author
 
-This project does not currently specify a license. Add one (e.g., MIT) if you plan to open-source contributions.
+**Poralla Nagaraju**
+- 🎓 B.Tech CSE (AI & ML), JNTUH — 2025
+- 📍 Hyderabad, India
+- 🔗 [GitHub Profile](https://github.com/Porallanagaraju13)
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License.
